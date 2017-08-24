@@ -29,7 +29,7 @@ request -> [Mock Server]
 # 代理服务器地址
 proxy_url=https://auth-test.1000sails.com/dpos-auth-web/s/
 # 代理延迟返回
-proxy_delay=1000
+proxy_delay=3000
 # 本地响应目录，其内部目录结构必须与请求地址相同
 response_dir=lion
 # mock服务对应的本地端口
@@ -41,9 +41,9 @@ port=8888
 2. 支持多服务配置
 ````
 # 代理服务器地址
-proxy_url.shop=https://www.baidu.com
+proxy_url.shop=https://www.baidu.com/
 # 代理延迟返回
-proxy_delay.shop=1000
+proxy_delay.shop=3000
 # 本地响应目录，其内部目录结构必须与请求地址相同
 response_dir.shop=dpos
 # mock服务对应的本地端口
@@ -51,6 +51,16 @@ port.shop=8989
 # 默认cookie，启用时会覆盖服务端的cookie
 #cookie.dpos=ddddd
 ````
+
+### 测试
+1. 运行bin/mock-**可执行文件
+2. 访问http://localhost:8989/shop/8888/test，等待3秒，确认是否返回了以下内容
+````
+{
+    "test": "11111"
+}
+````
+3. 访问http://localhost:8989，等待3秒，确认是否返回了百度错误页面
 
 ### 编译(本项目维护人员执行)
 ````
