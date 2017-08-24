@@ -31,7 +31,7 @@ proxy_url=https://auth-test.1000sails.com/dpos-auth-web/s/
 # 代理延迟返回
 proxy_delay=1000
 # 本地响应目录，其内部目录结构必须与请求地址相同
-response_dir=laya
+response_dir=lion
 # mock服务对应的本地端口
 port=8888
 # 默认cookie，启用时会覆盖服务端的cookie
@@ -45,7 +45,7 @@ proxy_url.shop=https://www.baidu.com
 # 代理延迟返回
 proxy_delay.shop=1000
 # 本地响应目录，其内部目录结构必须与请求地址相同
-response_dir.shop=shop
+response_dir.shop=dpos
 # mock服务对应的本地端口
 port.shop=8989
 # 默认cookie，启用时会覆盖服务端的cookie
