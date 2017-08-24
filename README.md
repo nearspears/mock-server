@@ -18,9 +18,9 @@ request -> [Mock Server]
 4. 访问本地端口即可代理远程服务
 
 ### 文件说明
-1. bin/filter.properties 用来指定需要mock的url地址
+1. bin/filter.properties 用来指定需要mock的地址。没有被mock的地址将会访问代理服务，并返回真实响应
     - 支持path配置，如：/shop/{shop}/test
-2. bin/config.properties mock服务配置
+2. bin/config.properties mock服务配置，支持多服务代理
 3. bin/mock-** mock服务启动文件
 
 ### 配置
@@ -51,9 +51,6 @@ port.shop=8989
 # 默认cookie，启用时会覆盖服务端的cookie
 #cookie.dpos=ddddd
 ````
-
-### 使用建议
-目前已定义了服务端lion和dpos文件夹，建议所有使用者直接把本地JSON目录上传至GIT，大家共享使用
 
 ### 编译(本项目维护人员执行)
 ````
